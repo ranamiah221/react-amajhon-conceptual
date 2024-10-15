@@ -1,5 +1,5 @@
 import { NavLink } from "react-router-dom";
-
+import './Navbar.css'
 
 const Navbar = () => {
     return (
@@ -10,9 +10,9 @@ const Navbar = () => {
             </div>
             <nav>
                 <ul className="flex text-xl font-medium gap-5">
-                    <li><NavLink>Home</NavLink></li>
-                    <li><NavLink>Products</NavLink></li>
-                    <li><NavLink>About</NavLink></li>
+                    <li><NavLink to='/'>Home</NavLink></li>
+                    <li><NavLink to='/products'>Products</NavLink></li>
+                    <li><NavLink to='/dashboard'>Dashboard</NavLink></li>
                 </ul>
             </nav>
 
