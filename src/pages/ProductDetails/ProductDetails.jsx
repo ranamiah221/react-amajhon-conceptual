@@ -1,4 +1,4 @@
-import { useLoaderData, useNavigation, useParams } from "react-router-dom";
+import { useLoaderData } from "react-router-dom";
 
 const ProductDetails = () => {
   const product = useLoaderData();
@@ -15,9 +15,9 @@ const ProductDetails = () => {
 
   return (
     <>
-        <div className="card card-side bg-base-100 shadow-xl my-10 shadow-blue-200">
+        <div className="card card-side bg-base-100 shadow-xl mt-5 mb-10 shadow-blue-200 border-2 border-gray-500 ">
         <figure>
-          <img
+          <img className=""
             src={thumbnail}
             alt="Movie"
           />
