@@ -1,18 +1,20 @@
+import { Link } from "react-router-dom";
+
 const Product = ({ product }) => {
-  const { title, images, price, rating } = product;
-  console.log(product);
+  const {id, title, images, price, rating } = product;
+//   console.log(product);
   return (
     <div class="w-full max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
-        <img
-          class="p-8 h-96 w-full rounded-t-lg"
-          src={images[0]}
-          alt="product image"
-        />
+      <img
+        class="p-8 h-96 w-full rounded-t-lg"
+        src={images[0]}
+        alt="product image"
+      />
       <div class="px-5 pb-5">
-          <h5 class="text-xl font-semibold tracking-tight text-gray-900 dark:text-white">
-           {title}
-          </h5>
-      
+        <h5 class="text-xl font-semibold tracking-tight text-gray-900 dark:text-white">
+          {title}
+        </h5>
+
         <div class="flex items-center mt-2.5 mb-5">
           <div class="flex items-center space-x-1 rtl:space-x-reverse">
             <svg
@@ -71,11 +73,12 @@ const Product = ({ product }) => {
           </span>
 
           {/* dynamic button */}
-          
-          <button className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
-               View Details
-          </button>
 
+          <Link to={`/products/${id}`}>
+            <button className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+              View Details
+            </button>
+          </Link>
         </div>
       </div>
     </div>

@@ -3,6 +3,7 @@ import MainLayouts from "../MainLayouts/MainLayouts";
 import Home from "../pages/Home/Home";
 import Products from "../pages/Products/Products";
 import ErrorPage from "../components/ErrorPage/ErrorPage";
+import ProductDetails from "../pages/ProductDetails/ProductDetails";
 
 
 const Router = createBrowserRouter([
@@ -20,7 +21,12 @@ const Router = createBrowserRouter([
                 element:<Products></Products>,
                 loader:()=>fetch('https://dummyjson.com/products')
             },
-            
+            {
+                path:"/products/:id",
+                element:<ProductDetails></ProductDetails>,
+                loader:({params})=>fetch(`https://dummyjson.com/products/${params.id}`)
+
+            }
 
         ]
     }
