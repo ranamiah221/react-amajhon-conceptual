@@ -17,8 +17,10 @@ const Router = createBrowserRouter([
             },
             {
                 path:'/products',
-                element:<Products></Products>
+                element:<Products></Products>,
+                loader:()=>fetch('https://dummyjson.com/products')
             },
+            
 
         ]
     }
